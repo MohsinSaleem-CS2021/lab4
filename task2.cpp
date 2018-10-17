@@ -8,10 +8,10 @@ public:
   bool empty()
   {
     if(tos==10)
-      return true;
+      return false;
 
     else if(tos==0)
-      return false;
+      return true;
   }
 
   void push(string item)
@@ -23,7 +23,7 @@ public:
         //showStack();
     }
     else
-        cout<<"Cannot add...";
+        cout<<"full!!!!!!!!  Cannot add"<<endl;
 
     for(int i=tos ; i<=9 ; i++)
       std::cout << stack[i] << '\n';
@@ -69,6 +69,8 @@ int main() {
     std::cout << "/***********************/" << '\n';
     std::cout << "/***********************/" << '\n';
     std::cout << "/***********************/" << '\n';
+    std::cout << endl;
+    std::cout << endl;
 
     std::cout << "press a for add" << '\n';
     std::cout << "press r for remove" << '\n';
@@ -102,7 +104,7 @@ int main() {
 
     else if(choice=='c')
     {
-      s.empty();
+      //s.empty();
       if(s.empty()==true)
         std::cout << "not empty" << '\n';
 
